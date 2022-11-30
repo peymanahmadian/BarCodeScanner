@@ -9,14 +9,15 @@ const App = () => {
     } else {
       setState("Barcode Detector supported!");
     }
+    //@ts-ignore
+    const html5QrcodeScanner = new Html5QrcodeScanner("qr-reader", { fps: 30, qrbox: 250 });
+    //@ts-ignore
+    html5QrcodeScanner.render(onScanSuccess);
   }, []);
   const onScanSuccess = (decodedText: string, decodedResult: string) => {
     setState(`code scanned is ${decodedText} and result is ${decodedResult}`)
   }
-  //@ts-ignore
-  const html5QrcodeScanner = new Html5QrcodeScanner("qr-reader", { fps: 30, qrbox: 250 });
-  //@ts-ignore
-  html5QrcodeScanner.render(onScanSuccess);
+
   return (
     <div className="App">
       Barcode scanner
