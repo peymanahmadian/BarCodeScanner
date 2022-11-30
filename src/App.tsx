@@ -27,10 +27,18 @@ const App = () => {
 
   return (
     <div className="App">
-      Barcode scanner
-      {state}
-      <input value={"start"} type={"button"} onClick={() => start()} />
-      <div id="qr-reader" style={{ width: "600px" }}></div>
+      <div>
+        Barcode scanner
+        {state}
+      </div>
+      <div>
+        <input value={"start"} type={"button"} onClick={() => start()} />
+
+      </div>
+      <div>
+        <div id="qr-reader" style={{ width: "100vw" }}></div>
+
+      </div>
 
     </div>
   );
