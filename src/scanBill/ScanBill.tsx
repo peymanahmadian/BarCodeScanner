@@ -9,7 +9,7 @@ const ScanBill = () => {
         { facingMode: { exact: "environment" } },
         {
           fps: 10, // Optional, frame per seconds for qr code scanning
-          qrbox: { width: 80, height: 80 },
+          qrbox: { width: 200, height: 200 },
         },
         (decodedText: string, decodedResult: any) => {
           // do something when code is read
